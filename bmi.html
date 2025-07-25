@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計算BMI</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+        background-color: #f9f9f9;
+    }
+
+    h1 {
+        color: #333;
+        text-align: center;
+    }
+
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        box-sizing: border-box;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        width: 100%;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    .home-link {
+        display: block;
+        margin-top: 15px;
+        text-align: center;
+        text-decoration: none;
+        color: #007BFF;
+        font-weight: bold;
+    }
+
+    .home-link:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <h1>計算BMI</h1>
+    <form action="">
+        <label for="name">姓名</label>
+        <input type="text" id="name" name="name" placeholder="請輸入中文或英文姓名" style="text-align: center;">
+        <label for="height">身高</label>
+        <input type="number" id="height" name="height" placeholder="請輸入數字" style="text-align: center;" step="0.1"
+            required>
+        <label for="weight">體重</label>
+        <input type="number" id="weight" name="weight" placeholder="請輸入數字" style="text-align: center;" step="0.1"
+            required>
+
+        <button type="submit">計算</button>
+
+        <a href="/" class="home-link">HOME</a>
+    </form>
+</body>
+
+</html>
