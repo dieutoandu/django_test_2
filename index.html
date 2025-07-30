@@ -19,7 +19,10 @@
         }
 
         h2 {
-            background-color: rgb(73, 65, 55);
+            background-color: rgb(114, 97, 75);
+            display: inline-block;
+            width: 400px;
+            border-radius: 20px;
         }
 
         .cip {
@@ -31,6 +34,7 @@
             color: rgb(68, 66, 64);
             margin: 10px 20px;
             padding: 10px;
+            border-radius: 20px;
         }
 
         .image {
@@ -59,11 +63,53 @@
             background-color: rgb(116, 116, 95);
             width: 200px;
         }
+
+        #Table {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #3f443b;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(158, 44, 44, 0.1);
+            color: rgb(209, 204, 204);
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            width: 50%;
+            background-color: #6b9bcf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .home-link {
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
 <body>
-    <h1>何謂健身?</h1>
+    <h1 style="background-color: #87bd72; display: inline-block;
+            width: 500px; border-radius: 20px;">何謂健身?</h1>
     <img width="100%" src="img/pane.jpg" alt="">
     <div class="char">
         <h3>健身，英文稱為workout，健身這兩個字拆開來的意思就是健康身體，通過各種運動方式或方法來增強力量、增加肌肉量、柔韌性、耐力，以及提高協調和控制身體各部分的能力來使我們的身體更強健。</h3>
@@ -134,7 +180,8 @@
         </tbody>
     </table>
     <br>
-    <div style="text-align: left; margin-left: 24px; background-color: rgb(141, 129, 112);">
+    <div
+        style="text-align: left; margin-left: 24px; background-color: rgb(141, 129, 112); border-radius: 20px; height: 100px; padding-top: 10px;">
         <p><b> <a href="/bmi.html">計算BMI:</a></b>&nbsp;
             一位民眾身高160公分，體重65公斤，BMI25.4kg/m2(=65÷1.6÷1.6)，體重屬於「過重」。<br>
             <b>計算所需熱量:</b>&nbsp;
@@ -150,36 +197,39 @@
     </div>
     <br>
     <h2>gym movie</h2>
-    <iframe width="45%" height="397" src="https://www.youtube.com/embed/wIynl3at0Rs"
-        title="20 MINUTE FULL BODY WORKOUT (NO EQUIPMENT)" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="45%" height="397" src="https://www.youtube.com/embed/vu-Nja5oqQc"
-        title="20 MINUTE FULL  BODY WORKOUT (NO EQUIPMENT)" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div>
+        <iframe width="45%" height="397" src="https://www.youtube.com/embed/wIynl3at0Rs"
+            title="20 MINUTE FULL BODY WORKOUT (NO EQUIPMENT)" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="45%" height="397" src="https://www.youtube.com/embed/vu-Nja5oqQc"
+            title="20 MINUTE FULL  BODY WORKOUT (NO EQUIPMENT)" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-    <video controls src="video/videoplayback.mp4"></video>
+        <video controls src="video/videoplayback.mp4"></video>
+    </div>
     <hr>
     <h2 class="cip">table</h2>
-    <h3>需要更多資訊?免費索取健身資訊</h3>
-    <p>前100名還贈送［我愛健身］書籍一本!</p>
+    <div id="Table">
+        <h3>需要更多資訊?免費索取健身資訊</h3>
+        <p>前100名還贈送［我愛健身］書籍一本!</p>
 
-    <form action="">
-        <input type="checkbox" name="age" id="age">18 <br><br>
-        <select name="" id="">
-            <option value="taipei">taipei</option>
-            <option value="new_taipei">new_taipei</option>
-            <option value="vietnam">vietnam</option>
-            <option value="USA">USA</option>
-        </select><br><br>
-        <label for="email">Email :</label>
-        <input type="text" name="email" id="email" placeholder="test@gmail.com">
-        <p>please input your Opintion</p>
-        <textarea name="" name="comment" id="comment" cols="30" rows="20"></textarea><br>
-        <button type="submit">sand</button>
-    </form>
-
+        <form action="">
+            <input type="checkbox" name="age" id="age">18 <br><br>
+            <select name="" id="">
+                <option value="taipei">taipei</option>
+                <option value="new_taipei">new_taipei</option>
+                <option value="vietnam">vietnam</option>
+                <option value="USA">USA</option>
+            </select><br><br>
+            <label for="email">Email :</label>
+            <input type="text" name="email" id="email" placeholder="test@gmail.com">
+            <p>please input your Opintion</p>
+            <textarea name="" name="comment" id="comment" cols="30" rows="20"></textarea><br>
+            <button type="submit">sand</button>
+        </form>
+    </div>
 </body>
 
 
