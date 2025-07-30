@@ -5,71 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>計算BMI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        h1 {
+            color: #dfd4d4;
+            text-align: center;
+            display: inline-block;
+            width: 400px;
+            background-color: rgb(65, 83, 117);
+            border-radius: 20px;
+        }
+
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+    </style>
 </head>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        padding: 30px;
-        background-color: #b19595;
-    }
 
-    h1 {
-        color: #333;
-        text-align: center;
-    }
-
-    form {
-        max-width: 400px;
-        margin: 0 auto;
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    label {
-        display: block;
-        margin-top: 15px;
-        font-weight: bold;
-    }
-
-    input[type="text"],
-    input[type="number"] {
-        width: 100%;
-        padding: 8px;
-        margin-top: 5px;
-        box-sizing: border-box;
-    }
-
-    button {
-        margin-top: 20px;
-        padding: 10px 20px;
-        width: 100%;
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #0056b3;
-    }
-
-    .home-link {
-        display: block;
-        margin-top: 15px;
-        text-align: center;
-        text-decoration: none;
-        color: #007BFF;
-        font-weight: bold;
-    }
-
-    .home-link:hover {
-        text-decoration: underline;
-    }
-</style>
 
 <body>
     <h1>計算BMI</h1>

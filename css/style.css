@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(53, 50, 50);
+    text-align: center;
+    color: rgb(235, 238, 240);
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #c0a5a5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #2a323a;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    width: 50%;
+    background-color: #6b9bcf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.home-link {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width:1024px) {
+    form {
+        width: 100%;
+    }
+
+
+
+}
