@@ -12,7 +12,7 @@
             text-align: center;
             display: inline-block;
             width: 400px;
-            background-color: rgb(65, 83, 117);
+            background-color: rgb(80, 90, 110);
             border-radius: 20px;
         }
 
@@ -31,7 +31,21 @@
             box-sizing: border-box;
             border-radius: 10px;
         }
+
+        .bmi_label {
+            background-color: rgb(201, 212, 218);
+            display: inline-block;
+            width: 400px;
+            border-radius: 20px;
+            margin: 20px;
+            padding-bottom: 10px;
+            font-size: 20px;
+            color: black;
+
+        }
     </style>
+
+    <script src="js/tools.js"></script>
 </head>
 
 
@@ -47,10 +61,47 @@
         <input type="number" id="weight" name="weight" placeholder="請輸入數字" style="text-align: center;" step="0.1"
             required>
 
-        <button type="submit">計算</button>
+        <button type="button" onclick="bmi_ans()">計算</button>
 
         <a href="/" class="home-link">HOME</a>
     </form>
+    <div class="bmi_label">
+        <label for="" id="text"></label>
+        <label for="" id="number"></label>
+        <label for="" id="mes"></label>
+    </div>
 </body>
+
+<script>
+    const nameEl = document.querySelector("#name");
+    const heightEl = document.querySelector("#height");
+    const weightEl = document.querySelector("#weight");
+    const label_t = document.querySelector("#text");
+    const number_t = document.querySelector("#number");
+
+    console.log(nameEl.value, heightEl.value, weightEl.value);
+
+
+
+    function bmi_ans() {
+
+
+
+        const bmi = getBMI(heightEl.value, weightEl.value)
+
+        const mess = mes(bmi)
+        console.log(mess);
+
+
+        label_t.innerHTML = nameEl.value;
+        number_t.innerHTML = "BMI : " + bmi.toFixed(2);
+        document.querySelector("#mes").innerHTML = mess[0]
+        document.querySelector("#mes").style.color = mess[1]
+
+    }
+
+
+
+</script>
 
 </html>
