@@ -1,4 +1,5 @@
 function getBMI(height, weight) {
+    
         return weight / (height / 100) ** 2;
     }
 
