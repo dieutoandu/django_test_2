@@ -46,9 +46,9 @@
 
         .bmi_text {
             display: inline-block;
-            background-color: rgb(77, 93, 105);
+            background-color: rgb(113, 123, 131);
             border-radius: 20px;
-            margin: 20px 200px;
+            margin: 20px auto;
             width: 500px;
         }
 
@@ -59,6 +59,12 @@
             width: 800px;
 
         } */
+
+        .bmi_picture {
+            background-image: url("img/bmi.jpg");
+            width: 100%;
+            height: 100%;
+        }
     </style>
 
     <script src="js/tools.js"></script>
@@ -67,6 +73,7 @@
 
 <body>
     <h1>計算BMI</h1>
+    <div class="bmi_picture"></div>
     <form action="" style="border-radius: 20px;">
         <label for="name">姓名</label>
         <input type="text" id="name" name="name" placeholder="請輸入中文或英文姓名" style="text-align: center;">
@@ -86,27 +93,27 @@
         <label for="" id="number"></label>
         <label for="" id="mes"></label>
     </div>
+    <div>
+        <div class="bmi_text">
+            <h2>BMI < 18.5</h2>
+                    <h4>「體重過輕」，需要多運動，均衡飲食，以增加體能，維持健康！</h4>
+        </div>
 
-    <div class="bmi_text">
-        <h2>BMI < 18.5</h2>
-                <h4>「體重過輕」，需要多運動，均衡飲食，以增加體能，維持健康！</h4>
+        <div class="bmi_text">
+            <h2>18.5 ≤ BMI < 24</h2>
+                    <h4>恭喜！「健康體重」，要繼續保持！</h4>
+        </div>
+
+        <div class="bmi_text">
+            <h2>24 ≤ BMI < 27</h2>
+                    <h4>「體重過重」了，要小心囉，趕快力行「健康體重管理」！</h4>
+        </div>
+
+        <div class="bmi_text">
+            <h2>BMI ≥ 27</h2>
+            <h4>啊～「肥胖」，需要立刻力行「健康體重管理」囉！</h4>
+        </div>
     </div>
-
-    <div class="bmi_text">
-        <h2>18.5 ≤ BMI < 24</h2>
-                <h4>恭喜！「健康體重」，要繼續保持！</h4>
-    </div>
-
-    <div class="bmi_text">
-        <h2>24 ≤ BMI < 27</h2>
-                <h4>「體重過重」了，要小心囉，趕快力行「健康體重管理」！</h4>
-    </div>
-
-    <div class="bmi_text">
-        <h2>BMI ≥ 27</h2>
-        <h4>啊～「肥胖」，需要立刻力行「健康體重管理」囉！</h4>
-    </div>
-
 </body>
 
 <script>
@@ -116,7 +123,7 @@
     const label_t = document.querySelector("#text");
     const number_t = document.querySelector("#number");
 
-    console.log(nameEl.value, heightEl.value, weightEl.value);
+    // console.log(nameEl.value, heightEl.value, weightEl.value);
 
 
 
@@ -124,16 +131,16 @@
 
 
 
-        const bmi = getBMI(heightEl.value, weightEl.value)
+        const bmi = getBMI(heightEl.value, weightEl.value);
 
-        const mess = mes(bmi)
+        const mess = mes(bmi);
         console.log(mess);
 
 
         label_t.innerHTML = nameEl.value;
         number_t.innerHTML = "BMI : " + bmi.toFixed(2);
-        document.querySelector("#mes").innerHTML = mess[0]
-        document.querySelector("#mes").style.color = mess[1]
+        document.querySelector("#mes").innerHTML = mess[0];
+        document.querySelector("#mes").style.color = mess[1];
 
     }
 
